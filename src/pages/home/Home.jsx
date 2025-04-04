@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import img_pessoas from '../../assets/img/WhatsApp Image 2025-03-10 at 14.31.26 (1).jpeg'
+import img_pessoas from '../../assets/img/pessoas_iee.jpeg'
 
 function Home() {
     return (
