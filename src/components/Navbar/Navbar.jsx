@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import styles from './Navbar.module.css'
-import logo from './iee_no_bg 1.png'
+import logo from './iee_no_bg.png'
 
 function Navbar() {
     return (
