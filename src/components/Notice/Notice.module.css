@@ -1,0 +1,31 @@
+.card {
+    width: 300px; /* Defina a largura do card */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Garante que a imagem e os textos respeitem os limites do card */
+    background: #fff; /* Fundo branco */
+    transition: transform 0.3s ease-in-out;
+    margin: auto;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.container_img img {
+    width: 100%; /* Imagem ocupando toda a largura */
+    height: auto; /* Altura ajustada automaticamente */
+    display: block;
+}
+
+.text {
+    padding: 16px; /* Espaçamento interno */
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+

@@ -1,11 +1,12 @@
 .notice {
     width: 100%;
-    padding: 40px 80px;
     background-color: #fff;
+    margin: 0px;
   }
   
   .container {
     display: flex;
+    padding: 40px 80px;
     justify-content: space-between;
     align-items: center;
   }
@@ -44,7 +45,7 @@
   .number {
     font-size: 32px;
     font-weight: bold;
-    color: #bf3f57; 
+    color: var(--vermelho) 
   }
   
   .label {
