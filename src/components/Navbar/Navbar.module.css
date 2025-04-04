@@ -1,5 +1,5 @@
 .container { 
-    background-color: #426CA6;
+    background-color: var(--azul);
     height: 100px;
     display: flex;
     align-items: center;
