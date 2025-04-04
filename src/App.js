@@ -3,7 +3,7 @@ import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
-import Notice from './components/Notice/Notice';
+import Section from './components/Section/Section';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/comoajudar' element='' />
       </Routes>
-      <Notice/>
+      <Section/>
       <Footer />
     </BrowserRouter>
   );
