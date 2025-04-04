@@ -10,7 +10,8 @@ function Navbar() {
             </Link>
             <ul className={styles.lista}>
                 <li className={styles.item} ><Link to='/'>Home</Link></li>
-                <li className={styles.item} ><Link to='/comoajudar'>Como ajudar?</Link></li>
+                <li className={styles.item} ><Link to='/comoajudar'>Como ajudar</Link></li>
+                <li className={styles.item} ><Link to='/'>Seja um voluntário</Link></li>
             </ul>
         </nav>
     )
