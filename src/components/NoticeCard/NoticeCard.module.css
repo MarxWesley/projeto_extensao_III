@@ -4,6 +4,7 @@
     overflow: hidden; /* Garante que a imagem e os textos respeitem os limites do card */
     background: #fff; /* Fundo branco */
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .card:hover{

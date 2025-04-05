@@ -13,7 +13,6 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/comoajudar' element='' />
       </Routes>
-      <Section/>
       <Footer />
     </BrowserRouter>
   );

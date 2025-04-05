@@ -5,14 +5,18 @@ import logo from './iee_no_bg.png'
 function Navbar() {
     return (
         <nav className={styles.container}>
-            <Link to='/'>
-                <img className={styles.img} src={logo} alt="Logo do Instituto"/>
-            </Link>
-            <ul className={styles.lista}>
-                <li className={styles.item} ><Link to='/'>Home</Link></li>
-                <li className={styles.item} ><Link to='/comoajudar'>Como ajudar</Link></li>
-                <li className={styles.item} ><Link to='/'>Seja um voluntário</Link></li>
-            </ul>
+            <div className={styles.img}>
+                <Link to='/'>
+                    <img src={logo} alt="Logo do Instituto"/>
+                </Link>
+            </div>
+            <div className={styles.navgation}>
+                <ul className={styles.lista}>
+                    <li className={styles.item} ><Link to='/'>Home</Link></li>
+                    <li className={styles.item} ><Link to='/comoajudar'>Como ajudar</Link></li>
+                    <li className={styles.item} ><Link to='/'>Seja um voluntário</Link></li>
+                </ul>
+            </div>
         </nav>
     )
 }
