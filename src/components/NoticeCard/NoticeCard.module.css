@@ -1,0 +1,49 @@
+.card {
+    width: 300px; /* Defina a largura do card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Garante que a imagem e os textos respeitem os limites do card */
+    background: #fff; /* Fundo branco */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.container_img img {
+    width: 100%; /* Imagem ocupando toda a largura */
+    height: auto; /* Altura ajustada automaticamente */
+    display: block;
+}
+
+.text {
+    padding: 16px; /* Espaçamento interno */
+    padding-top: 0px;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 2em;
+}
+
+.text p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 1.6em;
+}
+
+.text a {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--azul); /* Cor do link */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+    transition: color 0.3s;
+}
+
+.text a:hover {
+    color: var(--vermelho);
+}
