@@ -20,7 +20,12 @@ const Footer = () => {
           rel="noopener noreferrer"
           title="Facebook">
           <FaFacebookF/>  </a>
-          <FaPhone/> (48) 3433-8235
+
+          <a href="#" //vai dar aviso que nao vai redirecionar pra nada, mas da pra rodar suave
+          rel="noopener noreferrer"
+          title="(48) 3433-8235">
+          <FaPhone/></a>
+           
         </nav>
 
         <div className={styles.contactInfo}>
