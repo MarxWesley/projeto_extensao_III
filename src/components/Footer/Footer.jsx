@@ -8,19 +8,36 @@ const Footer = () => {
       <p>&copy; {new Date().getFullYear()}
       <a href="/sobre">Sobre</a>
       </p>
-      <nav>
-        <a href="https://www.instagram.com/ieediomicio/"
+      <nav> 
+      <a
+        href="https://www.instagram.com/ieediomicio/"
         target="_blank"
         rel="noopener noreferrer"
-        title="Instagram">
-        <FaInstagram/></a>
+        title="Instagram"
+        className={styles.instagram}
+      >
+        <FaInstagram />
+      </a>
 
-        <a href="https://www.facebook.com/p/IEE-Diomício-Freitas-100066695940896/?locale=pt_BR&_rdr"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Facebook">
-          <FaFacebookF/>  </a>
-          <FaPhone/> (48) 3433-8235
+      <a
+        href="https://www.facebook.com/p/IEE-Diomício-Freitas-100066695940896/?locale=pt_BR&_rdr"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Facebook"
+        className={styles.facebook}
+      >
+        <FaFacebookF />
+      </a>
+
+      <a
+        href="tel:+554834338235"
+        rel="noopener noreferrer"
+        title="(48) 3433-8235"
+        className={styles.phone}
+      >
+        <FaPhone />
+      </a>
+           
         </nav>
 
         <div className={styles.contactInfo}>

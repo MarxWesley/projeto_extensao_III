@@ -2,7 +2,7 @@
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1px;
   }
   
   .footer a {
@@ -13,4 +13,17 @@
   
   .footer a:hover {
     text-decoration: underline;
+  }
+
+
+  .instagram svg {
+    color: #E1306C;
+  }
+  
+  .facebook svg {
+    color: #3b5998;
+  }
+  
+  .phone svg {
+    color: #25D366;
   }
