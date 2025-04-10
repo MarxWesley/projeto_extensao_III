@@ -21,7 +21,7 @@ const Section = () => {
 
         <div className={styles.dataSection}>
           <DataSection label='VOLUNTÁRIOS' number='108.071'/>
-          <DataSection label='VOLUNTÁRIOS' number='108.071'/>
+          <DataSection label='ENTIDADES' number='4.763'/>
           <DataSection label='VOLUNTÁRIOS' number='108.071'/>
           <DataSection label='VOLUNTÁRIOS' number='108.071'/>
         </div>
