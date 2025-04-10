@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Section.module.css';
+import DataSection from '../DataSection/DataSection';
 
 const Section = () => {
   return (
@@ -19,22 +20,10 @@ const Section = () => {
         </div>
 
         <div className={styles.dataSection}>
-          <div className={styles.dataItem}>
-            <span className={styles.label}>FORMAÇÃO INCLUSIVA</span>
-            <span className={styles.number}>+10</span>
-          </div>
-          <div className={styles.dataItem}>
-            <span className={styles.label}>ATUAÇÃO SOCIAL</span>
-            <span className={styles.number}>20</span>
-          </div>
-          <div className={styles.dataItem}>
-            <span className={styles.label}>INSERÇÃO NO MERCADO</span>
-            <span className={styles.number}>+30</span>
-          </div>
-          <div className={styles.dataItem}>
-            <span className={styles.label}>ATIVIDADES CULTURAIS</span>
-            <span className={styles.number}>11</span>
-          </div>
+          <DataSection label='VOLUNTÁRIOS' number='108.071'/>
+          <DataSection label='VOLUNTÁRIOS' number='108.071'/>
+          <DataSection label='VOLUNTÁRIOS' number='108.071'/>
+          <DataSection label='VOLUNTÁRIOS' number='108.071'/>
         </div>
       </div>
 
