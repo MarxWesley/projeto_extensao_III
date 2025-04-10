@@ -9,22 +9,34 @@ const Footer = () => {
       <a href="/sobre">Sobre</a>
       </p>
       <nav> 
-        <a href="https://www.instagram.com/ieediomicio/"
+      <a
+        href="https://www.instagram.com/ieediomicio/"
         target="_blank"
         rel="noopener noreferrer"
-        title="Instagram">
-        <FaInstagram/></a>
+        title="Instagram"
+        className={styles.instagram}
+      >
+        <FaInstagram />
+      </a>
 
-        <a href="https://www.facebook.com/p/IEE-Diomício-Freitas-100066695940896/?locale=pt_BR&_rdr"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Facebook">
-          <FaFacebookF/>  </a>
+      <a
+        href="https://www.facebook.com/p/IEE-Diomício-Freitas-100066695940896/?locale=pt_BR&_rdr"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Facebook"
+        className={styles.facebook}
+      >
+        <FaFacebookF />
+      </a>
 
-          <a href="#" //vai dar aviso que nao vai redirecionar pra nada, mas da pra rodar suave
-          rel="noopener noreferrer"
-          title="(48) 3433-8235">
-          <FaPhone/></a>
+      <a
+        href="tel:+554834338235"
+        rel="noopener noreferrer"
+        title="(48) 3433-8235"
+        className={styles.phone}
+      >
+        <FaPhone />
+      </a>
            
         </nav>
 
