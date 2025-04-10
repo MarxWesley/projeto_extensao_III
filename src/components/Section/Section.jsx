@@ -20,12 +20,12 @@ const Section = () => {
 
         <div className={styles.dataSection}>
           <div className={styles.dataItem}>
-            <span className={styles.label}>FORMAÇÃO INCLUSIVA</span>
-            <span className={styles.number}>+10</span>
+            <span className={styles.label}>VOLUNTÁRIOS</span>
+            <span className={styles.number}>108.071</span>
           </div>
           <div className={styles.dataItem}>
-            <span className={styles.label}>ATUAÇÃO SOCIAL</span>
-            <span className={styles.number}>20</span>
+            <span className={styles.label}>ENTIDADES</span>
+            <span className={styles.number}>4.763</span>
           </div>
           <div className={styles.dataItem}>
             <span className={styles.label}>INSERÇÃO NO MERCADO</span>

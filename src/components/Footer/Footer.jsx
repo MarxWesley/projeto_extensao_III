@@ -8,7 +8,7 @@ const Footer = () => {
       <p>&copy; {new Date().getFullYear()}
       <a href="/sobre">Sobre</a>
       </p>
-      <nav>
+      <nav> 
         <a href="https://www.instagram.com/ieediomicio/"
         target="_blank"
         rel="noopener noreferrer"
