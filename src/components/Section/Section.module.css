@@ -7,8 +7,12 @@
   .container {
     display: flex;
     padding: 40px 80px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+  }
+
+  p {
+    width: auto;
   }
   
   .textSection {

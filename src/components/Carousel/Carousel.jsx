@@ -16,9 +16,9 @@ const Carousel = ({img1, img2, img3,alt}) => {
 
   return (
     <Slider {...settings}>
-      <div><img className={styles.banner_img} src={img1} alt={alt}/></div>
-      <div><img className={styles.banner_img} src={img2} alt={alt}/></div>
-      <div><img className={styles.banner_img} src={img3} alt={alt}/></div>
+      <div className={styles.container}><img className={styles.banner_img} src={img1} alt={alt}/></div>
+      <div className={styles.container}><img className={styles.banner_img} src={img2} alt={alt}/></div>
+      <div className={styles.container}><img className={styles.banner_img} src={img3} alt={alt}/></div>
     </Slider>
   );
 };
