@@ -11,7 +11,7 @@ const Carousel = ({img1, img2, img3,alt}) => {
     slidesToShow: 1,     // Exibe um slide por vez
     slidesToScroll: 1,   // Avança um slide por vez
     autoplay: true,      // Ativa o autoplay
-    autoplaySpeed: 5000, // Tempo entre as trocas de slides (em milissegundos)
+    autoplaySpeed: 3000, // Tempo entre as trocas de slides (em milissegundos)
   };
 
   return (

@@ -1,0 +1,29 @@
+.qr_code_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;  /* Centraliza os itens */
+    padding: 10px 20px;
+    border:2px solid #000;
+    border-radius: 10px;
+    width:70%;
+    gap: 10%;
+    margin: auto ;
+  }
+  
+  .qr_code_img {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;  /* Centraliza a imagem verticalmente */
+  }
+  
+  .qr_code {
+    max-width: 100%;
+    max-height: 200px;  /* Ajuste a altura conforme necessário */
+    width: auto;
+    height: auto;
+  }
+
+.steps li {
+    padding-left: 0px;
+    margin: 0px;
+  }
