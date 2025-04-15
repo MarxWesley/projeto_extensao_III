@@ -1,4 +1,4 @@
-import QrCode from '../../../components/QrCode/QrCode';
+import QrCode from '../../components/QrCode/QrCode';
 import styles from '../howToHelp/HowToHelp.module.css'
 
 function HowToHelp() {
