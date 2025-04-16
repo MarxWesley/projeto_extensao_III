@@ -31,13 +31,15 @@
     color: #333;
     line-height: 1.6;
     margin-bottom: 10px;
+    margin-left: 10px;
   }
   
   .dataSection {
-    width: 40%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 16px;
+    justify-content: space-evenly;
+    grid-column: span 2; /* Para que fique ao lado do texto em telas médias+ */
   }
   
   .impactPhrase {
@@ -47,3 +49,29 @@
     font-weight: bold;
     margin-top: 40px;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      display: grid;
+      max-width: 1200px;
+      width: 100%;
+      grid-template-columns: 1fr; /* Só uma coluna */
+      padding: 0;
+    }
+  
+    .textSection h2 {
+      font-size: 1em;
+    }
+
+    .textSection {
+      order: 1; /* Aparece primeiro */
+      margin-top: 10px;
+      margin-left: 5%;
+      width: 350px;
+    }
+  
+    .dataSection {
+      order: 2; /* Aparece abaixo do texto */
+      margin-top: 20px;
+    }
+  } 
