@@ -1,0 +1,13 @@
+.container_img {
+    margin: 0;
+    margin-bottom: 20px;
+    height: 700px;
+}
+
+.carousel_img {
+    height: 100%; /* ou o tamanho que quiser */
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }

@@ -10,7 +10,7 @@ function QrCode() {
             </div>
             <div className={styles.steps}> 
                 <h3>Escaneie esse código no seu aplicativo do telefone</h3>
-                <div>
+                <div className={styles.list}>
                     <ol>
                         <li>Open XXXXXX on your phone</li>
                         <li>Tap Linked Devices from the menu</li>

@@ -16,6 +16,10 @@
     display: flex;
 }
 
+ul {
+    margin: 0px;
+}
+
 .lista { 
     display: flex;
     list-style: none;
@@ -33,8 +37,6 @@
     
     color: var(--verde-pastel);
 }
-
-
 
 /* 📱 Responsividade para telas menores */
 @media (max-width: 400px) {
