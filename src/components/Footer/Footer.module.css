@@ -2,7 +2,7 @@
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 1px;
+    padding: 2px;
   }
   
 .footer a {
@@ -42,10 +42,6 @@ nav a {
 /* 📱 Responsividade para telas pequenas */
 @media (max-width: 600px) {
   .footer {
-    font-size: 0.7em;
-  }
-
-  .contactInfo p {
     font-size: 0.7em;
   }
 

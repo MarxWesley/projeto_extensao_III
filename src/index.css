@@ -1,5 +1,10 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 :root {
-  --azul:#426CA6;
+  --azul:#3567aa;
   --vermelho: #BF3F56;
   --verde-escuro: #62BF4A;
   --verde-pastel: #B8D8AF; 
