@@ -2,28 +2,50 @@
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 1px;
+    padding: 2px;
   }
   
-  .footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a {
+  margin: 0px;
+}
+
+.footer p {
+  margin: 10px 0px;
+}
+
+.instagram svg {
+  color: #E1306C;
+  cursor: pointer;
+}
+
+.facebook svg {
+  color: #3b5998;
+  cursor: pointer;
+}
+
+.phone svg {
+  color: #25D366;
+  cursor: pointer;
+}
+
+.contactInfo p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+/* 📱 Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.7em;
   }
 
-
-  .instagram svg {
-    color: #E1306C;
+  .footer p {
+    margin: 10px 0px;
   }
-  
-  .facebook svg {
-    color: #3b5998;
-  }
-  
-  .phone svg {
-    color: #25D366;
-  }
+}

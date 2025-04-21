@@ -12,7 +12,11 @@ const Section = ({impactPhrase}) => {
     {
       id: 2,
       p: "Com sede em Criciúma (SC), oferece oficinas pedagógicas, atividades socioculturais, cursos profissionalizantes e projetos que visam à inclusão social e laboral."
-    }
+    },
+    {
+      id: 3,
+      p: "Com sede em Criciúma (SC), oferece oficinas pedagógicas, atividades socioculturais, cursos profissionalizantes e projetos que visam à inclusão social e laboral. Com sede em Criciúma (SC), oferece oficinas pedagógicas, atividades socioculturais, cursos profissionalizantes e projetos que visam à inclusão social e laboral."
+    },
   ]
 
   return (

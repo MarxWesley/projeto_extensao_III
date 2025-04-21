@@ -3,9 +3,7 @@ import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
-import HowToHelp from './pages/home/howToHelp/HowToHelp';
-
-
+import HowToHelp from './pages/howToHelp/HowToHelp';
 
 function App() {
   return (
