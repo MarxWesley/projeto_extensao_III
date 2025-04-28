@@ -1,49 +1,65 @@
-import React from "react";
-import styles from "./Footer.module.css"; // Para estilização
-import { FaFacebookF, FaInstagram, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaMapMarkerAlt } from 'react-icons/fa'
+import styles from './Footer.module.css'
+import casinha from './casa.svg'
+import { BsFacebook, BsInstagram, BsWhatsapp, BsYoutube } from 'react-icons/bs'
 
-const Footer = () => {
-  return (
-    <footer className={styles.footer}>
-      <p>&copy; {new Date().getFullYear()}
-        <a href="/sobre">Sobre</a>
-      </p>
-      <nav>
-        <a
-          href="https://www.instagram.com/ieediomicio/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Instagram"
-          className={styles.instagram}
-        >
-          <FaInstagram />
-        </a>
+export default function Footer() {
+    return (
+        <footer className={styles.footer}>
+            <div className={styles.container}>
+                <div className={styles.left}>
+                    <img src={casinha} alt='instituto' className={styles.casinha}/>
+                    <div className={styles.info}>
+                        <p>Rua Lúcia Milloli, 211 - Criciúma/SC</p>
+                        <p>educ.especial@ibest.com.br</p>
+                        <p>(48) 3433-8235</p>
+                    </div>
+                    <div className={styles.mapIcon}>
+                        <a  href='https://maps.app.goo.gl/dZWGRLCH9bCLZKUcA'
+                            rel="noopener noreferrer"
+                            title="Localizacao"
+                            target='_blank'
+                        >
+                            <FaMapMarkerAlt />
+                        </a>
+                    </div>
+                </div>
 
-        <a
-          href="https://www.facebook.com/p/IEE-Diomício-Freitas-100066695940896/?locale=pt_BR&_rdr"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Facebook"
-          className={styles.facebook}
-        >
-          <FaFacebookF />
-        </a>
+                <div className={styles.right}>
+                    <div className={styles.svg}>
+                        <a  href='https://www.facebook.com/p/IEE-Diomício-Freitas-100066695940896/?locale=pt_BR&_rdr'
+                            rel="noopener noreferrer"
+                            title="Facebook"
+                            target='_blank'
+                        >
+                            <BsFacebook/>
+                        </a>
+                        <a  href='https://www.instagram.com/ieediomicio/'
+                            rel="noopener noreferrer"
+                            title="Instagram"
+                            target='_blank'
+                        >
+                            <BsInstagram/>
+                        </a>
+                        <a  href='https://example.com'
+                            rel="noopener noreferrer"
+                            title="Youtube"
+                        >
+                            <BsYoutube/>
+                        </a>
+                        <a  href='https://example.com'
+                            rel="noopener noreferrer"
+                            title="WhatsApp"
+                        >
+                            <BsWhatsapp/>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <a
-          href="tel:+554834338235"
-          rel="noopener noreferrer"
-          title="(48) 3433-8235"
-          className={styles.phone}
-        >
-          <FaPhone />
-        </a>
-      </nav>
-
-        <div className={styles.contactInfo}>
-          <p><FaMapMarkerAlt/> R. Lúcia Milioli 211, Santa Bárbara, Criciúma - SC </p>
-        </div>
-    </footer>
-  );
-};
-
-export default Footer
+            <div className={styles.copy}>
+                <p>&copy; 2025 IEEDF - Todos os direitos reservados</p>
+            </div>
+        </footer>
+    )
+}

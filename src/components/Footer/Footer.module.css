@@ -1,51 +1,170 @@
 .footer {
-    background-color: #222;
+    background-color: var(--azul);
+    height: 168px;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 0rem;
+    background-color: var(--azul);
+}
+
+.casinha {
+    width: 160px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 15px;
+}
+
+.info p {
     color: white;
+    font-size: 1em;
+    margin: 0;
+}
+
+.mapIcon {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapIcon a{
+    display: flex;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mapIcon a:hover{
+    transform: scale(1.10);
+}
+
+.mapIcon a svg {
+    color: var(--azul);
+    margin: 0 auto;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.right{ 
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.svg {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.svg a {
+    display: flex;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.svg a:hover{
+    transform: scale(1.10);
+}
+
+.svg a svg {
+    color: var(--azul);
+    margin: 0 auto;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.copy {
     text-align: center;
-    padding: 2px;
-  }
-  
-.footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
+    margin-left: 50%;
+    padding: 0;
 }
 
-nav a {
-  margin: 0px;
+.copy p {
+    color: white;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
 }
 
-.footer p {
-  margin: 10px 0px;
-}
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
 
-.instagram svg {
-  color: #E1306C;
-  cursor: pointer;
-}
+    .left {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.facebook svg {
-  color: #3b5998;
-  cursor: pointer;
-}
+    .casinha {
+        width: 120px;
+    }
 
-.phone svg {
-  color: #25D366;
-  cursor: pointer;
-}
+    .info p {
+        font-size: 0.9em;
+    }
 
-.contactInfo p {
-  font-size: 1em;
-  margin-top: 10px;
-}
+    .mapIcon {
+        margin-top: 10px;
+    }
 
-/* 📱 Responsividade para telas pequenas */
-@media (max-width: 600px) {
-  .footer {
-    font-size: 0.7em;
-  }
+    .right {
+        margin-top: 20px;
+    }
 
-  .footer p {
-    margin: 10px 0px;
-  }
+    .svg {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .svg a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .svg a svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .copy {
+        margin-left: 0;
+        background-color: var(--azul);
+        padding-bottom: 10px;
+    }
+
+    .copy p {
+        font-size: 0.8em;
+    }
 }
