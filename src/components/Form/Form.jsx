@@ -14,7 +14,7 @@ export default function Form() {
                     <div className={styles.checkbox_container}>
                         <input type='checkbox' id='consent' required/>
                         <label htmlFor='consent'> 
-                            Estou ciente de que ao enviar meus dados estou autorizando e consentindo com o tratamento dos meus dados pessoais como: nome completo e e-mail, telefone e etc, para finalidade exclusiva da Ong Viver e suas atividades.
+                            Estou ciente de que ao enviar meus dados estou autorizando e consentindo com o tratamento dos meus dados pessoais como: nome completo e e-mail, telefone e etc, para finalidade exclusiva do instituto e suas atividades.
                         </label>
                     </div>
 
