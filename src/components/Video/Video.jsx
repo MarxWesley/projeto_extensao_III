@@ -4,6 +4,7 @@ function Video() {
     return (
         <div className={styles.container}>
             <iframe 
+                className={styles.iframe}
                 width="560" 
                 height="315" 
                 src="https://www.youtube.com/embed/vHj-OL5cNCg?si=PpCxWjrW-_WXhq-X" 

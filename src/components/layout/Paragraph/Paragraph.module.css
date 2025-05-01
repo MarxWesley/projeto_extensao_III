@@ -1,7 +1,14 @@
 .p{
     width: 100%;
     font-size: 100%;
-    text-indent: 2em;
     margin: 1.25rem 0;
     font-weight: 350;
+}
+
+.indent {
+    text-indent: 2rem;
+}
+
+.bold {
+    font-weight: bold;
 }
