@@ -11,6 +11,10 @@ function Navbar() {
         setIsOpen(!isOpen)
     }
 
+    const handleLinkClick = () => {
+        setIsOpen(false)
+    }
+
     return (
         <nav className={styles.container}>
             <div className={styles.topRow}>
@@ -27,9 +31,9 @@ function Navbar() {
 
             <div className={`${styles.navgation} ${isOpen ? styles.showMenu : ''}`}>
                 <ul className={styles.lista}>
-                    <li className={styles.item}><Link to='/'>Home</Link></li>
-                    <li className={styles.item}><Link to='/comoajudar'>Como ajudar</Link></li>
-                    <li className={styles.item}><Link to='/contato'>Contato</Link></li>
+                    <li className={styles.item} onClick={handleLinkClick}><Link to='/'>Home</Link></li>
+                    <li className={styles.item} onClick={handleLinkClick}><Link to='/comoajudar'>Como ajudar</Link></li>
+                    <li className={styles.item} onClick={handleLinkClick}><Link to='/contato'>Contato</Link></li>
                 </ul>
             </div>
         </nav>

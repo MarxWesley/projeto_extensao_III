@@ -24,8 +24,6 @@ export default function Form() {
                 <div className={styles.map}>
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3500.212941516804!2d-49.3790595!3d-28.6832761!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95218289dcc4f0bd%3A0x34d48ba2a20e3375!2sR.%20L%C3%BAcia%20Milioli%2C%20211%20-%20Santa%20Barbara%2C%20Crici%C3%BAma%20-%20SC%2C%2088802-020!5e0!3m2!1spt-BR!2sbr!4v1745800685479!5m2!1spt-BR!2sbr" 
-                        width="600" 
-                        height="450" 
                         allowfullscreen="" 
                         title='map'
                         loading="lazy" 

@@ -11,3 +11,8 @@
     padding: 0;
     border: none;
   }
+
+  .custom-caption h5 {
+    color: var(--verde-escuro);
+    font-weight: bold;
+  }
