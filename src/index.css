@@ -8,16 +8,15 @@
   --vermelho: #BF3F56;
   --verde-escuro: #62BF4A;
   --verde-pastel: #B8D8AF; 
-  --cinza: #F2F2F2;
+  --cinza: #fff;
   --preto: #000000;
+  --bs-body-bg: #17aa17; /* ou use sua variável --cinza */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cinza) !important;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
