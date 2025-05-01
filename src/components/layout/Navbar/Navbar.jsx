@@ -33,6 +33,7 @@ function Navbar() {
                 <ul className={styles.lista}>
                     <li className={styles.item} onClick={handleLinkClick}><Link to='/'>Home</Link></li>
                     <li className={styles.item} onClick={handleLinkClick}><Link to='/comoajudar'>Como ajudar</Link></li>
+                    <li className={styles.item} onClick={handleLinkClick}><Link to='/sobre'>Sobre</Link></li>
                     <li className={styles.item} onClick={handleLinkClick}><Link to='/contato'>Contato</Link></li>
                 </ul>
             </div>
