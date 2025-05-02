@@ -13,9 +13,9 @@ export default function Article({title}) {
                 <Video />
 
                 <h2 className={styles.title}>Missão, Visão e Valores</h2>
-                <Paragraph  text={"Missão: Promover a inclusão e melhorar a qualidade de vida dos alunos com deficiência intelectual por meio de um atendimento especializado e adaptado às necessidades de cada estudante."} />
-                <Paragraph  text={"Visão: Tornar-se referência em educação especial e inclusão social, oferecendo condições de aprendizado que preparem os alunos para uma vida autônoma e digna."} />
-                <Paragraph  text={"Valores:"} type={'bold'}/>
+                <p className={styles.p}><strong className={styles.bold}>Missão:</strong> Promover a inclusão e melhorar a qualidade de vida dos alunos com deficiência intelectual por meio de um atendimento especializado e adaptado às necessidades de cada estudante.</p>
+                <p className={styles.p}><strong className={styles.bold}>Visão:</strong> Tornar-se referência em educação especial e inclusão social, oferecendo condições de aprendizado que preparem os alunos para uma vida autônoma e digna.</p>
+                <p className={styles.p}><strong className={styles.bold}>Valores:</strong></p>
                 <ul className={styles.lista}>
                     <li className={styles.item}><strong className={styles.bold}>Inclusão:</strong> Compromisso com a integração dos alunos à sociedade.</li>
                     <li className={styles.item}><strong className={styles.bold}>Respeito à diversidade:</strong> Valorização das diferenças individuais.</li>
