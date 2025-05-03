@@ -58,12 +58,30 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    position: relative;
     transition: 0.3s ease;
+  }
+
+  .item a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 100%;
+    height: 3.5px;
+    background-color: var(--verde-pastel);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
   }
 
   .item a:hover {
     color: var(--verde-pastel);
     transition: 0.3s ease;
+  }
+
+  .item a:hover::after{
+    transform: scaleY(1);
   }
   
   /* --- RESPONSIVO --- */
