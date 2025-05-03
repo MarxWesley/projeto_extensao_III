@@ -9,7 +9,7 @@ export default function HthContent({title, content, buttonText}) {
                     <p className={styles.cardText}>
                         {content}
                     </p>
-                    <button className={styles.button}>{buttonText}</button> <br /> <br />
+                    <button className={styles.button}>{buttonText}</button>
                 </div>
             </div>
     );
