@@ -2,11 +2,11 @@ import Video from "../../Video/Video";
 import Paragraph from "../Paragraph/Paragraph";
 import styles from './Article.module.css'
 
-export default function Article({title}) {
+export default function Article() {
     return (
         <div className={styles.container}>
             <article>
-                <h2 className={styles.title}>{title}</h2>
+                <h2 className={styles.title}>História</h2>
                 <Paragraph text={"  O Instituto Diomício Freitas surgiu com a missão de oferecer educação especializada para pessoas com deficiência intelectual, promovendo sua inclusão social e integração comunitária. Desde sua fundação, a instituição tem se dedicado a criar um ambiente acolhedor, adaptado e inclusivo, onde cada aluno recebe atendimento personalizado conforme suas necessidades. Seu foco está no desenvolvimento integral dos estudantes, respeitando suas particularidades e estimulando suas potencialidades."} type={'indent'}/>
                 <Paragraph text={"  Como uma organização filantrópica, o Instituto atua sem fins lucrativos e é mantido por meio de doações, parcerias com o poder público — especialmente com o município de Criciúma e o governo estadual — e a colaboração da sociedade civil. Ao longo de sua trajetória, tem se consolidado como referência em educação especial, oferecendo não apenas ensino adaptado, mas também suporte terapêutico, atividades culturais e programas de formação profissional, contribuindo para uma vida mais autônoma e digna para seus alunos."} type={'indent'}/>
 
