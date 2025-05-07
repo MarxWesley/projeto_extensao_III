@@ -3,8 +3,8 @@ import HthContent from '../../components/HthContent/HthContent';
 import styles from './HowToHelp.module.css';
 import Banner from  '../../components/Banner/Banner';
 import image from './atv_fisica3.png';
-import { FaPiggyBank, FaDonate, FaBoxOpen, FaRecycle, FaCalendarAlt, FaCoins, FaHandHoldingHeart } from 'react-icons/fa';
-import { IoIosBasket } from 'react-icons/io';
+import { FaPiggyBank, FaDonate, FaBoxOpen, FaRecycle, FaCalendarAlt } from 'react-icons/fa';
+import Article from '../../components/layout/Article/Article';
 
 
 function HowToHelp() {
@@ -37,43 +37,26 @@ function HowToHelp() {
             content: 'A Viver promove diversos eventos e campanhas para arrecadar recursos e manter suas atividades. Você pode participar adquirindo vouchers das ações como a Pizzada da Viver, a Feijoada da Viver e o McDia Feliz, e também se tornando um patrocinador desses eventos. Acompanhe nossas redes sociais e não perca nenhum evento da Viver!',
             icon: <FaCalendarAlt />
         },
-        {
-            title: 'Depositar sua contribuição nos cofrinhos da Viver',
-            content: 'A Viver possui diversos cofrinhos em estabelecimentos parceiros, nos quais você pode doar suas moedas. Pode parecer pouco, mas faz uma grande diferença. Você também pode solicitar um cofrinho para o seu estabelecimento.',
-            icon: <FaCoins />
-        },
-        {
-            title: 'Doar Cestas Básicas, Leite Integral e Alimentos não Perecíveis',
-            content: 'Além de todo o atendimento presencial, a Viver oferece mensalmente aos assistidos uma cesta básica e duas caixas de leite integral, portanto precisa muito de alimentos não perecíveis para a montagem das cestas e também de leite integral.',
-            icon: <IoIosBasket />
-
-        },
-        {
-            title: 'Adquirir Produtos do Artesanato e Institucionais da Viver',
-            content: 'A Viver possui um grupo de voluntárias que desenvolvem lindas peças de artesanato com a finalidade de arrecadar recursos para a Instituição. São panos de prato, toalhas de mão, sacolinhas de doces, guirlandas, enfeites de porta e muitos outros itens.',
-            icon: <FaHandHoldingHeart />
-        }
-
     ] 
 
     return (
         <>
             <Container>
-                 <Banner img={image} text={'Como ajudar?'}/>
-                 
-                <h1 className={styles.title}>Faça parte desta história de amor ao próximo!</h1>
-                <p className={styles.subtitle}>
-                    Para apoiar a Viver e as crianças e adolescentes beneficiados pela instituição, você pode:
-                </p>
+                <Banner img={image} text={'Como ajudar?'}/>
+                <Article>
+                    <h1 className={styles.title}>Faça parte desta história de amor ao próximo!</h1>
+                    <p className={styles.subtitle}>
+                        Para apoiar a Viver e as crianças e adolescentes beneficiados pela instituição, você pode:
+                    </p>
 
-                { contents.length > 0 && contents.map((content) =>
-                <HthContent 
-                    title={content.title}
-                    buttonText={content.buttonText}
-                    content={content.content}
-                    icon={content.icon}
-                /> )}
-
+                    { contents.length > 0 && contents.map((content) =>
+                    <HthContent 
+                        title={content.title}
+                        buttonText={content.buttonText}
+                        content={content.content}
+                        icon={content.icon}
+                    /> )}
+                </Article> 
             </Container>
         </>
     );

@@ -1,6 +1,11 @@
 import styles from './HthContent.module.css'
 
 const HthContent = ({ title, content, buttonText, icon }) => {
+
+    function handleOnClick() {
+        window.alert('Chave copiada com sucesso!')
+    }
+
     return (
         <div className={styles.card}>
             <div className={styles.icon}>{icon}</div>
@@ -11,8 +16,7 @@ const HthContent = ({ title, content, buttonText, icon }) => {
                 </p>
                 {buttonText && (
                     <>
-                        <button className={styles.button}>{buttonText}</button>
-                        <br /><br />
+                        <button className={styles.button} onClick={handleOnClick}>{buttonText}</button>
                     </>
                 )}
             </div>

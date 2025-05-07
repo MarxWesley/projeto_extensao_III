@@ -16,3 +16,16 @@
     color: var(--verde-escuro);
     font-weight: bold;
   }
+
+@media(max-width: 700px){
+  .container_img{
+    height: 500px;
+  }
+}
+
+
+@media(max-width: 400px){
+  .container_img{
+    height: 330px;
+  }
+}
