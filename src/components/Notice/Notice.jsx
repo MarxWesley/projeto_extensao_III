@@ -1,58 +1,48 @@
 import NoticeCard from '../NoticeCard/NoticeCard'
 import styles from './Notice.module.css'
-import img from '../../assets/img/pessoas_iee.jpeg'
-
-const noticias = [
-    {
-        img: {img},
-        alt: 'uma imagem qualquer',
-        text: 'aqui alguma coisa vai ta escrita e eu nao to nem ai',
-        link: 'https://trackmob.com.br/blog/6-sites-de-ongs-para-inspirar-sua-captacao-online/',
-        text_link: 'Leia mais ->'
-    },
-    {
-        img: {img},
-        alt: 'uma outra imagem qualquer',
-        text: 'aqui alguma coisa vai ta escrita e eu nao to nem ai pt 2',
-        link: 'https://trackmob.com.br/blog/6-sites-de-ongs-para-inspirar-sua-captacao-online/',
-        text_link: 'Leia mais ->'
-    },
-    {
-        img: {img},
-        alt: 'uma outra imagem qualquer',
-        text: 'aqui alguma coisa vai ta escrita e eu nao to nem ai pt 2',
-        link: 'https://trackmob.com.br/blog/6-sites-de-ongs-para-inspirar-sua-captacao-online/',
-        text_link: 'Leia mais ->'
-    },
-    {
-        img: {img},
-        alt: 'uma outra imagem qualquer',
-        text: 'aqui alguma coisa vai ta escrita e eu nao to nem ai pt 2',
-        link: 'https://trackmob.com.br/blog/6-sites-de-ongs-para-inspirar-sua-captacao-online/',
-        text_link: 'Leia mais ->'
-    },
-    {
-        img: {img},
-        alt: 'uma outra imagem qualquer',
-        text: 'aqui alguma coisa vai ta escrita e eu nao to nem ai pt 2',
-        link: 'https://trackmob.com.br/blog/6-sites-de-ongs-para-inspirar-sua-captacao-online/',
-        text_link: 'Leia mais ->'
-    },
-]
+import { useEffect, useState } from 'react'
 
 function Notice() {
 
+    const [notice, setNotice] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3001/notice', {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(resp => resp.json())
+        .then((data) => {
+            const dataFormatada = data.map(item => {
+                const dataOriginal = new Date(item.createdAt);
+                const newDate = dataOriginal.toLocaleDateString('pt-BR', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                });
+
+                return {
+                    ...item,
+                    createdAt: newDate, // substitui a data original pela formatada
+                };
+            });
+            setNotice(dataFormatada);
+        })
+        .catch((err) => console.log(err))
+    }, [])
+ 
     return (
         <div className={styles.container}>
-            {noticias.length > 0 && noticias.map((noticia) => 
-                <div className={styles.container_img}> 
+            {notice.length > 0 && notice.map((noticia) => 
+                <div key={noticia.id} className={styles.container_img}> 
                     <NoticeCard
-                    key={noticia.alt} 
-                    img={img}
-                    alt={noticia.alt}
-                    text={noticia.text}
-                    link={noticia.link}
-                    text_link={noticia.text_link}
+                        img={noticia.img}
+                        alt={noticia.description}
+                        text={noticia.description}
+                        link={noticia.link}
+                        text_link={'Leia mais'}
                     />
                 </div>
             )}

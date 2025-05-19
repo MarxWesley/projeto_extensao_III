@@ -1,15 +1,7 @@
+import { FaArrowRight } from 'react-icons/fa'
 import styles from './NoticeCard.module.css'
 
-function NoticeCard({img, alt, text, link, text_link}) {
-
-    const formatDate = () => {
-        const today = new Date();
-        return new Intl.DateTimeFormat('pt-BR', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric'
-        }).format(today);
-    };
+function NoticeCard({img, alt, text, link, text_link, date}) {
       
     return (
         <div className={styles.card}>
@@ -17,9 +9,9 @@ function NoticeCard({img, alt, text, link, text_link}) {
                 <img src={img} alt={alt}/>
             </div>
             <div className={styles.text}>
-                <h2>{formatDate()}</h2>
+                <h2>{date}</h2>
                 <p>{text}</p>
-                <a href={link} target='_self' title='link'>{text_link}</a>
+                <span>{text_link} <FaArrowRight/> </span>
             </div>
         </div>
     )
