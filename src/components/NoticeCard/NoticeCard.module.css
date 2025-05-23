@@ -13,7 +13,7 @@
 
 .container_img img {
     width: 100%; /* Imagem ocupando toda a largura */
-    height: auto; /* Altura ajustada automaticamente */
+    height: 350px; /* Altura ajustada automaticamente */
     display: block;
 }
 
