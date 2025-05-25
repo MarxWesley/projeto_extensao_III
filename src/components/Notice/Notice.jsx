@@ -1,3 +1,4 @@
+import NewNotice from '../newNotice/NewNotice'
 import NoticeCard from '../NoticeCard/NoticeCard'
 import styles from './Notice.module.css'
 import { useEffect, useState } from 'react'
@@ -38,14 +39,16 @@ function Notice() {
             {notice.length > 0 && notice.map((noticia) => 
                 <div key={noticia.id} className={styles.container_img}> 
                     <NoticeCard
+                        date={noticia.createdAt}
                         img={noticia.img}
-                        alt={noticia.description}
-                        text={noticia.description}
+                        alt={noticia.title}
+                        text={noticia.title}
                         link={noticia.link}
                         text_link={'Leia mais'}
                     />
                 </div>
             )}
+            <NewNotice/>
         </div>
     )
 }

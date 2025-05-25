@@ -1,5 +1,6 @@
 .card {
     width: 300px; /* Defina a largura do card */
+    height: 465px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     overflow: hidden; /* Garante que a imagem e os textos respeitem os limites do card */
     background: #fff; /* Fundo branco */
@@ -9,6 +10,10 @@
 
 .card:hover{
     transform: scale(1.05);
+}
+
+.container_img {
+    text-align: center;
 }
 
 .container_img img {
@@ -26,7 +31,7 @@
 .text h2 {
     font-size: 1em;
     color: #333;
-    margin-bottom: 2em;
+    margin-top: 1rem;
 }
 
 .text p {
@@ -35,16 +40,13 @@
     margin-bottom: 1.6em;
 }
 
-.text a {
+.text span {
     font-size: 14px;
     font-weight: bold;
     color: var(--azul); /* Cor do link */
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 8px;
     transition: color 0.3s;
 }
 
-.text a:hover {
+.text span:hover {
     color: var(--vermelho);
 }

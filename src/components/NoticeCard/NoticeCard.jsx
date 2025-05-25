@@ -1,7 +1,7 @@
 import { FaArrowRight } from 'react-icons/fa'
 import styles from './NoticeCard.module.css'
 
-function NoticeCard({img, alt, text, link, text_link, date}) {
+function NoticeCard({img, alt, text, text_link, date}) {
       
     return (
         <div className={styles.card}>
@@ -17,4 +17,4 @@ function NoticeCard({img, alt, text, link, text_link, date}) {
     )
 }
 
-export default NoticeCard
+export default NoticeCard 
