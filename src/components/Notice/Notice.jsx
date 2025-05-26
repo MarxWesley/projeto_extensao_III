@@ -40,6 +40,7 @@ function Notice() {
                 <div key={noticia.id} className={styles.container_img}> 
                     <NoticeCard
                         date={noticia.createdAt}
+                        id={noticia.id}
                         img={noticia.img}
                         alt={noticia.title}
                         text={noticia.title}

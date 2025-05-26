@@ -14,12 +14,52 @@
 
 .container_img {
     text-align: center;
+    position: relative;
 }
 
 .container_img img {
     width: 100%; /* Imagem ocupando toda a largura */
     height: 350px; /* Altura ajustada automaticamente */
     display: block;
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.card:hover .icons {
+    opacity: 1;
+}
+
+.icons svg {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 28px;
+    height: 100%;
+    box-shadow:  0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.icons svg:hover {
+    transform: scale(1.1);
+    background-color: #f0e9e9;
+}
+
+.edit {
+    color: var(--verde-escuro);
+}
+
+.delete {
+    color: var(--vermelho);
 }
 
 .text {
