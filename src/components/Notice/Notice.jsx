@@ -16,7 +16,9 @@ function Notice() {
         })
         .then(resp => resp.json())
         .then((data) => {
-            const dataFormatada = data.map(item => {
+            const filterData = data
+            .filter(item => item.status === true) 
+            .map(item => {
                 const dataOriginal = new Date(item.createdAt);
                 const newDate = dataOriginal.toLocaleDateString('pt-BR', {
                     day: '2-digit',
@@ -29,7 +31,7 @@ function Notice() {
                     createdAt: newDate, // substitui a data original pela formatada
                 };
             });
-            setNotice(dataFormatada);
+            setNotice(filterData);
         })
         .catch((err) => console.log(err))
     }, [])
