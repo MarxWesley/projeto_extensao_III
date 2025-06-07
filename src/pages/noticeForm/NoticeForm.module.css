@@ -2,6 +2,7 @@
     padding: 2rem;
     text-align: center;
     margin: 40px 10px;
+    overflow: hidden;
 }
 
 .container h2 {
@@ -28,8 +29,8 @@
     border-radius: 10px;
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    width: 50%;
+    max-width: 1000px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -88,6 +89,23 @@
 
 .customFileUpload:hover {
   background-color: var(--input-hover);
+}
+
+.previewWrapper {
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.2);
 }
 
 @media(max-width: 800px) {

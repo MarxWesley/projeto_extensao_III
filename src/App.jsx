@@ -7,6 +7,7 @@ import About from './pages/about/About';
 import Navbar from './components/layout/Navbar/Navbar';
 import Footer from './components/layout/Footer/Footer';
 import NoticeForm from './pages/noticeForm/NoticeForm';
+import InternalNotice from './pages/internalNotice/internalNotice';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/sobre' element={<About />} />
         <Route path='/criarNoticia' element={<NoticeForm />}/>
         <Route path='/editarNoticia/:id' element={<NoticeForm />}/>
+        <Route path='/noticia/:id' element={<InternalNotice/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

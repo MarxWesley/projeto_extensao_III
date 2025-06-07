@@ -3,12 +3,16 @@ import styles from './NoticeCard.module.css'
 import { MdDelete, MdEdit } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 
-function NoticeCard({id ,img, alt, text, text_link, date}) {
+function NoticeCard({id ,img, alt, title, text_link, date}) {
 
     const navigate = useNavigate()
 
     const handleEdit = () => {
         navigate(`/editarNoticia/${id}`)
+    }
+
+    const handleRead = () => {
+        navigate(`/noticia/${id}`)
     }
 
     const handleDelete = async () => {
@@ -35,7 +39,7 @@ function NoticeCard({id ,img, alt, text, text_link, date}) {
     }
 
     return (
-        <div className={styles.card}>
+        <div className={styles.card} >
             <div className={styles.container_img}>
                 <img src={img} alt={alt}/>
                 <div className={styles.icons}>
@@ -43,9 +47,9 @@ function NoticeCard({id ,img, alt, text, text_link, date}) {
                     <MdDelete onClick={handleDelete} className={styles.delete}/>
                 </div>
             </div>
-            <div className={styles.text}>
+            <div className={styles.text} onClick={handleRead}>
                 <h2>{date}</h2>
-                <p>{text}</p>
+                <p>{title}</p>
                 <span>{text_link} <FaArrowRight/> </span>
             </div>
         </div>

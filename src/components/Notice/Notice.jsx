@@ -45,7 +45,7 @@ function Notice() {
                         id={noticia.id}
                         img={noticia.img}
                         alt={noticia.title}
-                        text={noticia.title}
+                        title={noticia.title}
                         link={noticia.link}
                         text_link={'Leia mais'}
                     />

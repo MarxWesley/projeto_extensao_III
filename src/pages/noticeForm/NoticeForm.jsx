@@ -11,6 +11,8 @@ export default function NoticeForm() {
 
     const[fileName, setFileName] = useState('escolher imagem JPG, PNG, JPEG.')
 
+    const[imagePreview, setImagePreview] = useState(null)
+
     function fileNameChange(e) {
         const file = e.target.files[0]
         if(file) {
@@ -19,6 +21,7 @@ export default function NoticeForm() {
                 ...notice, 
                 file: file
             })
+            setImagePreview(URL.createObjectURL(file))
         }
     } 
 
@@ -54,7 +57,7 @@ export default function NoticeForm() {
         const method = isEditMode ? 'PUT' : 'POST'
         const url = isEditMode ? `http://localhost:3001/notice/${id}` : `http://localhost:3001/notice`
 
-        if(!notice.file && method == 'POST') {
+        if(!notice.file && method === 'POST') {
             alert('Selecione uma imagem antes de continuar.')
             return
         }
@@ -81,7 +84,7 @@ export default function NoticeForm() {
             <div className={styles.container} onSubmit={handleSubmit}>
                 <h2 className={styles.h2}>{isEditMode ? 'Editar notícia' : 'Criar nova notícia'}</h2>
                 <form className={styles.form}>
-                    <label className={styles.title}>
+                    <label className={styles.title} for='título'>
                         <h3>Título</h3>
                     </label> 
                     <input
@@ -94,7 +97,7 @@ export default function NoticeForm() {
                         required
                         className={styles.input}
                     />
-                    <label className={styles.title}>
+                    <label className={styles.title} for='Descrição'>
                         <h3>Descrição</h3>
                     </label> 
                     <textarea
@@ -122,6 +125,11 @@ export default function NoticeForm() {
                         <span className={styles.icon}>📄</span>
                         {fileName}
                     </label>
+                    {imagePreview && (
+                        <div className={styles.previewWrapper}>
+                            <img src={imagePreview} alt="preview" className={styles.previewImage}/>
+                        </div>
+                    )}
                     <button  type="submit">
                         {isEditMode? 'Atualizar' : 'Criar'}
                     </button>
