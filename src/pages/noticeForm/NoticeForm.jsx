@@ -34,9 +34,9 @@ export default function NoticeForm() {
             .then(res => res.json()) 
             .then(data => {
                 setNotice({
-                    file: data.file || 'Arquivo',
-                    title: data.title || 'Título',
-                    description: data.description || 'Descrição',
+                    file: data.file,
+                    title: data.title,
+                    description: data.description,
                 })
             })
             .catch(err => console.log(err))
@@ -51,18 +51,21 @@ export default function NoticeForm() {
     function handleSubmit(e) {
         e.preventDefault()
 
-        if(!notice.file) {
+        const method = isEditMode ? 'PUT' : 'POST'
+        const url = isEditMode ? `http://localhost:3001/notice/${id}` : `http://localhost:3001/notice`
+
+        if(!notice.file && method == 'POST') {
             alert('Selecione uma imagem antes de continuar.')
             return
         }
 
-        const method = isEditMode ? 'PUT' : 'POST'
-        const url = isEditMode ? `http://localhost:3001/notice/${id}` : `http://localhost:3001/notice`
-
         const formData = new FormData()
         formData.append('title', notice.title)
         formData.append('description', notice.description)
-        formData.append('file', notice.file)
+        if(notice.file) {
+           formData.append('file', notice.file) 
+        }
+        
 
         fetch(url, {
             method: method,

@@ -11,16 +11,40 @@ export default function Form() {
         consent: false
     })
 
+    const formatPhone = (value) => {
+        const numbers = value.replace(/\D/g, '');
+
+        if (numbers.length <= 10) {
+            return numbers.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+        } else {
+            return numbers.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+        }
+    };
+
+
     const handleOnChange = (e) => {
-        const {name, value, type, checked} = e.target
+        const { name, value, type, checked } = e.target;
+
+        let val = value;
+
+        if (name === 'phone') {
+            val = formatPhone(value); // <- aplica máscara
+        }
+
         setFormData((prev) => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked:value
-        }))
-    }
+            [name]: type === 'checkbox' ? checked : val
+        }));
+    };
+
 
     const submit = async (e) => {
         e.preventDefault()
+
+        const dataToSend = {
+            ...formData,
+            phone: formData.phone.replace(/\D/g, '')
+        }
 
         try {
             const response = await fetch('http://localhost:3001/contact', {
@@ -28,7 +52,7 @@ export default function Form() {
                 headers: {
                     'Content-Type':'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(dataToSend)
             })
 
             if(response.ok){
@@ -73,7 +97,7 @@ export default function Form() {
                     <input 
                         name='phone'
                         type='tel' 
-                        maxLength={14}
+                        maxLength={15}
                         placeholder='Telefone' 
                         required
                         value={formData.phone}
