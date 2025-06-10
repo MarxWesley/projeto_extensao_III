@@ -8,6 +8,8 @@ import Navbar from './components/layout/Navbar/Navbar';
 import Footer from './components/layout/Footer/Footer';
 import NoticeForm from './pages/noticeForm/NoticeForm';
 import InternalNotice from './pages/internalNotice/internalNotice';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
