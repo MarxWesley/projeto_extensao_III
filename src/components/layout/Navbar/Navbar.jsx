@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 import styles from './Navbar.module.css'
 import logo from './logo.svg'
+import { useAuth } from "../../AuthContext"
 
 function Navbar() {
+
+    const { token, logout } = useAuth();
 
     return (
         <nav className={`navbar navbar-expand-lg ${styles.container}`}>
@@ -27,6 +30,22 @@ function Navbar() {
                         </li>
                         <li className={`nav-item ${styles.item}`}>
                             <a className="nav-link" href="/contato">Contato</a>
+                        </li>
+                        <li className={`nav-item ${styles.item}`}>
+                            {
+                                token ? (
+                                    <a  
+                                        className="nav-link"
+                                        href="/"
+                                        onClick={logout}
+                                    >
+                                        Logout
+                                    </a> 
+                                ) :
+                                    <a className="nav-link" href="/login">  
+                                        Login
+                                    </a> 
+                            } 
                         </li>
                     </ul>
                 </div>

@@ -84,7 +84,7 @@ export default function NoticeForm() {
             <div className={styles.container} onSubmit={handleSubmit}>
                 <h2 className={styles.h2}>{isEditMode ? 'Editar notícia' : 'Criar nova notícia'}</h2>
                 <form className={styles.form}>
-                    <label className={styles.title} for='título'>
+                    <label className={styles.title} htmlFor='título'>
                         <h3>Título</h3>
                     </label> 
                     <input

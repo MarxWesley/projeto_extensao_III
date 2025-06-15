@@ -1,3 +1,4 @@
+import { useAuth } from '../AuthContext'
 import NewNotice from '../newNotice/NewNotice'
 import NoticeCard from '../NoticeCard/NoticeCard'
 import styles from './Notice.module.css'
@@ -6,6 +7,7 @@ import { useEffect, useState } from 'react'
 function Notice() {
 
     const [notice, setNotice] = useState([])
+    const { token } = useAuth();
 
     useEffect(() => {
         fetch('http://localhost:3001/notice', {
@@ -51,7 +53,14 @@ function Notice() {
                     />
                 </div>
             )}
-            <NewNotice/>
+            {
+                token && (
+                    <>
+                        <NewNotice/>
+                    </>
+                    
+                )
+            }
         </div>
     )
 }
