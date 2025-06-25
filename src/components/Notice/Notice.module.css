@@ -8,6 +8,20 @@
     max-width: 1200px; /* Limita a largura */
     justify-content: center;
 }
+
+.containerNoNotice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.containerNoNotice > img{
+    width: 500px;
+}
+
+
 /* Responsividade */
 @media (max-width: 1350px) {
     .container {
@@ -18,6 +32,10 @@
 @media (max-width: 600px) {
     .container {
         grid-template-columns: repeat(1, 1fr); /* 1 coluna em telas pequenas */
+    }
+
+    .containerNoNotice > img{
+        width: 200px;
     }
 }
 
