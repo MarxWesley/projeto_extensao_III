@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import styles from './Login.module.css'
 import logo from './logo.png'
 import { useState } from 'react'
-import img from './bg_login.png'
-
 
 export default function Login() {
 
@@ -26,7 +24,7 @@ export default function Login() {
     }
 
     return (
-        <div className={styles.container} style={{backgroundImage: {img}}}>
+        <div className={styles.container}>
             <div className={styles.card}>
                 <div className={styles.logo}>
                     <img src={logo} alt='logo do instituto Diomício'/>

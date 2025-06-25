@@ -1,4 +1,5 @@
 .container {
+    background-image: url('./bg_login.png');
     position: absolute; 
     background-repeat: no-repeat;
     background-size: cover;
