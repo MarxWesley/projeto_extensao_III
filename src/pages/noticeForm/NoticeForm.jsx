@@ -2,8 +2,10 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import styles from './NoticeForm.module.css'
 import Container from "../../components/layout/Container/Container"
+import { useAuth } from "../../components/AuthContext"
 
-export default function NoticeForm() {
+export default function NoticeForm() {  
+    const { token } = useAuth()
 
     const {id} = useParams()
     const navigate = useNavigate()
@@ -72,7 +74,10 @@ export default function NoticeForm() {
 
         fetch(url, {
             method: method,
-            body: formData
+            body: formData,
+            headers: {
+                Authorization: token,
+            }
         })
         .then(res => res.json())
         .then(() => navigate('/')) // redireciona após salvar
