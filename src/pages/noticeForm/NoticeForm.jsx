@@ -79,9 +79,23 @@ export default function NoticeForm() {
                 Authorization: token,
             }
         })
-        .then(res => res.json())
-        .then(() => navigate('/')) // redireciona após salvar
-        .catch(err => console.error(err))
+        .then(async (res) => {
+            if(!res.ok) {
+                const response = await res.json();
+                alert(`Erro: ${response.message}` || 'Erro ao salvar notícias');
+                return;
+            }
+            return res.json();
+        })
+        .then((data) => {
+            if(data) {
+                navigate('/');
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Erro inesperado ao salvar notícia');
+        });
     }
    
     return (

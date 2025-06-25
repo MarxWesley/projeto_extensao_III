@@ -2,8 +2,10 @@ import { FaArrowRight } from 'react-icons/fa'
 import styles from './NoticeCard.module.css'
 import { MdDelete, MdEdit } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../AuthContext'
 
 function NoticeCard({id ,img, alt, title, text_link, date}) {
+    const { token } = useAuth;
 
     const navigate = useNavigate()
 
@@ -23,6 +25,9 @@ function NoticeCard({id ,img, alt, title, text_link, date}) {
         try {
             const response = await fetch(`http://localhost:3001/notice/${id}`, {
                 method: "DELETE",
+                headers: {
+                    Authorization: token,
+                }
             })
 
             if(response.ok) {

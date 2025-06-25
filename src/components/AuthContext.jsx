@@ -1,14 +1,12 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import api from '../assets/api/Api';
 import { jwtDecode } from 'jwt-decode';
-// import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token') || '');
     const [user, setUser] = useState(null);
-    // const navigate = useNavigate();
 
     useEffect(() => {
     if (token) {
@@ -24,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         const response = await api.post('auth/login', { email, password });
-        const jwt = response.data.access_token;
+        const jwt = `Bearer ${response.data.access_token}`;
         localStorage.setItem('token', jwt);
         setToken(jwt);
     };
