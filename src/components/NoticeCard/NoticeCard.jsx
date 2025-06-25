@@ -47,10 +47,12 @@ function NoticeCard({id ,img, alt, title, text_link, date}) {
         <div className={styles.card} >
             <div className={styles.container_img}>
                 <img src={img} alt={alt}/>
-                <div className={styles.icons}>
-                    <MdEdit onClick={handleEdit} className={styles.edit}/>
-                    <MdDelete onClick={handleDelete} className={styles.delete}/>
-                </div>
+                {  token && 
+                    <div className={styles.icons}>
+                        <MdEdit onClick={handleEdit} className={styles.edit}/>
+                        <MdDelete onClick={handleDelete} className={styles.delete}/>
+                    </div>
+                }
             </div>
             <div className={styles.text} onClick={handleRead}>
                 <h2>{date}</h2>

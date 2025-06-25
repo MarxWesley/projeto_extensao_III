@@ -58,7 +58,6 @@ function Notice() {
                     <>
                         <NewNotice/>
                     </>
-                    
                 )
             }
         </div>
