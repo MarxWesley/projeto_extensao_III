@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../AuthContext'
 
 function NoticeCard({id ,img, alt, title, text_link, date}) {
-    const { token } = useAuth;
+    const { token } = useAuth();
 
     const navigate = useNavigate()
 
