@@ -4,6 +4,11 @@ import casinha from './casa.svg'
 import { BsFacebook, BsInstagram, BsWhatsapp, BsYoutube } from 'react-icons/bs'
 
 export default function Footer() {
+    const phoneNumber = '48998384125';
+    const message = 'Olá, quero mais informações sobre o instituto e os projetos realizados por vocês!';
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
@@ -47,9 +52,11 @@ export default function Footer() {
                         >
                             <BsYoutube/>
                         </a>
-                        <a  href='https://example.com'
+                        <a  
+                            href={whatsappLink}
                             rel="noopener noreferrer"
                             title="WhatsApp"
+                            target='_blank'
                         >
                             <BsWhatsapp/>
                         </a>
