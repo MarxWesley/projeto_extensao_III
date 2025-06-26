@@ -65,8 +65,11 @@ function Notice() {
                         src={img} 
                         alt="Imagem para quando está sem notícia" 
                     />
+                    {token && 
+                        <NewNotice />
+                    }
                 </div>
-                )}
+                ) }
         </>
     )
 }
