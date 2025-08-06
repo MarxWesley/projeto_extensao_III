@@ -1,0 +1,14 @@
+notice - 
+
+id,
+img - type file,
+createdAt,
+updatedAt,
+description,
+status
+
+contact - 
+name,
+e-mail,
+phone,
+message
