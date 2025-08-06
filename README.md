@@ -63,7 +63,7 @@ cd projeto_extensao_III
 
 ### 👨‍💻 Autores
 
-### <a href='https://github.com/MarxWesley'>Wesley Marques</a> – Desenvolvedor Full Stack
-### <a href='https://github.com/pedrovmdp'>Pedro Vinícius</a> – Desenvolvedor Full Stack
+### <a href='https://github.com/MarxWesley' about='_blank'>Wesley Marques</a> – Desenvolvedor Full Stack
+### <a href='https://github.com/pedrovmdp' about='_blank'>Pedro Vinícius</a> – Desenvolvedor Full Stack
 
 Projeto desenvolvido no contexto da disciplina de extensão universitária, com o objetivo de aplicar conhecimentos técnicos em benefício de uma causa social.
